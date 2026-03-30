@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consent Form — Luxe Level Aesthetics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garabold:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D1B3E;
+    --gold: #C9A96E;
+    --white: #FFFFFF;
+    --offwhite: #F8F7F4;
+    --gold-light: #C9A96E22;
+    --text: #2C2C2C;
+    --text-light: #6B6B6B;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--offwhite);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--white);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--navy);
+    padding: 2rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 1.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  header p {
+    font-family: 'Jost', sans-serif;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+    font-weight: 300;
+  }
+
+  /* ── Content ── */
+  .content { padding: 2rem 2.5rem 2.5rem; }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.3;
+    margin: 1.75rem 0;
+  }
+
+  /* ── Section Labels ── */
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  /* ── Form Fields ── */
+  .field-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .field label {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  .field input, .field select {
+    border: 1px solid #D8D5CF;
+    border-radius: 4px;
+    padding: 0.55rem 0.75rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    background: var(--offwhite);
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .field input:focus, .field select:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  /* ── Checkboxes (treatment areas) ── */
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  .checkbox-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #D8D5CF;
+    border-radius: 3px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    background: var(--offwhite);
+    transition: all 0.15s;
+  }
+  .checkbox-item input[type="checkbox"]:checked {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .checkbox-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px; top: 2px;
+    width: 5px; height: 9px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .checkbox-item span {
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+
+  /* ── Info Box ── */
+  .info-box {
+    background: var(--offwhite);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .info-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .info-box p {
+    font-size: 0.86rem;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+  }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.3rem 0 0;
+  }
+  .info-list li {
+    font-size: 0.86rem;
+    color: var(--text);
+    padding: 0.15rem 0 0.15rem 1.1rem;
+    position: relative;
+  }
+  .info-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .info-label {
+    font-weight: 500;
+    color: var(--navy);
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* ── Consent Checkboxes ── */
+  .consent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .consent-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    cursor: pointer;
+  }
+  .consent-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1.5px solid #D8D5CF;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    background: var(--offwhite);
+    margin-top: 1px;
+    transition: all 0.15s;
+  }
+  .consent-item input[type="checkbox"]:checked {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .consent-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px; top: 2px;
+    width: 5px; height: 10px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .consent-item span {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  /* ── Signature ── */
+  .sig-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+  }
+  .sig-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .sig-block label {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.35rem;
+  }
+  .sig-line {
+    border: none;
+    border-bottom: 1.5px solid var(--navy);
+    background: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    padding: 0.5rem 0.25rem 0.35rem;
+    color: var(--navy);
+  }
+  .sig-line:focus { outline: none; border-bottom-color: var(--gold); }
+
+  /* ── Footer ── */
+  .form-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E8E6E0;
+    margin-top: 2rem;
+  }
+  .form-footer p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; }
+    .page { max-width: 100%; box-shadow: none; }
+    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .field input, .field select { border: none; border-bottom: 1px solid #999; background: transparent; border-radius: 0; }
+    .info-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .checkbox-item input[type="checkbox"],
+    .consent-item input[type="checkbox"] {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 600px) {
+    header { padding: 1.5rem 1.25rem; }
+    header h1 { font-size: 1.4rem; }
+    .content { padding: 1.5rem 1.25rem 2rem; }
+    .field-row { flex-direction: column; gap: 0.85rem; }
+    .checkbox-grid { grid-template-columns: 1fr; }
+    .sig-row { flex-direction: column; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <h1>Luxe Level Aesthetics</h1>
+    <p>Darien, Connecticut</p>
+  </header>
+
+  <div class="content">
+
+    <h2 class="form-title">Neurotoxin Treatment Consent</h2>
+    <p class="intro">We want you to feel confident and informed about your treatment.<br>Please review the following and let us know if you have any questions.</p>
+
+    <!-- Patient Info -->
+    <div class="section-label">Patient Information</div>
+    <div class="field-row">
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="field">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field" style="max-width:200px;">
+        <label for="visit-date">Date of Visit</label>
+        <input type="date" id="visit-date" name="visit-date">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Treatment Areas -->
+    <div class="section-label">Treatment Areas</div>
+    <div class="checkbox-grid">
+      <label class="checkbox-item"><input type="checkbox" name="area" value="forehead"><span>Forehead Lines</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="glabella"><span>Glabella (11s)</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="crows-feet"><span>Crow's Feet</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="bunny-lines"><span>Bunny Lines</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="lip-flip"><span>Lip Flip</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="masseter"><span>Masseter</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="neck-bands"><span>Neck Bands</span></label>
+      <label class="checkbox-item"><input type="checkbox" name="area" value="other"><span>Other</span></label>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- What to Know -->
+    <div class="section-label">What to Know</div>
+    <div class="info-box">
+      <h3>About Your Treatment</h3>
+      <p>Neurotoxin (such as Botox, Dysport, or Xeomin) is an FDA-approved injectable that temporarily relaxes targeted muscles to smooth lines and wrinkles. Results typically last 3&ndash;4 months and vary by individual.</p>
+
+      <p class="info-label">Common side effects (temporary):</p>
+      <ul class="info-list">
+        <li>Mild bruising or swelling at injection sites</li>
+        <li>Slight headache or tenderness</li>
+      </ul>
+
+      <p class="info-label">Rare side effects (temporary):</p>
+      <ul class="info-list">
+        <li>Eyelid or brow drooping</li>
+        <li>Minor asymmetry</li>
+      </ul>
+      <p style="font-size:0.82rem; color:var(--text-light); margin-top:0.3rem;">These are uncommon and typically resolve on their own within a few weeks.</p>
+
+      <p class="info-label">This treatment is not appropriate if you:</p>
+      <ul class="info-list">
+        <li>Are pregnant or nursing</li>
+        <li>Have a neuromuscular disorder (e.g., myasthenia gravis)</li>
+        <li>Have a known allergy to botulinum toxin or its ingredients</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Consent Checkboxes -->
+    <div class="section-label">Your Consent</div>
+    <div class="consent-list">
+      <label class="consent-item">
+        <input type="checkbox" name="consent1">
+        <span>I confirm I am not pregnant or nursing and have disclosed all relevant medical conditions and medications.</span>
+      </label>
+      <label class="consent-item">
+        <input type="checkbox" name="consent2">
+        <span>I understand results vary by individual and may take 7&ndash;14 days to fully appear.</span>
+      </label>
+      <label class="consent-item">
+        <input type="checkbox" name="consent3">
+        <span>I understand touch-up appointments may be needed and are at additional cost.</span>
+      </label>
+      <label class="consent-item">
+        <input type="checkbox" name="consent4">
+        <span>I have had the opportunity to ask questions and feel informed about my treatment.</span>
+      </label>
+    </div>
+
+    <!-- Signature -->
+    <div class="sig-row">
+      <div class="sig-block">
+        <label>Patient Signature</label>
+        <input type="text" class="sig-line" name="signature">
+      </div>
+      <div class="sig-block" style="max-width:180px;">
+        <label>Date</label>
+        <input type="date" class="sig-line" name="sig-date" style="font-style:normal; font-size:0.92rem;">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="form-footer">
+      <p>
+        Luxe Level Aesthetics &nbsp;&middot;&nbsp; Darien, CT<br>
+        This form is retained in accordance with Connecticut state requirements for informed consent.<br>
+        &copy; 2026 Luxe Level Aesthetics. All rights reserved.
+      </p>
+    </div>
+
+  </div><!-- .content -->
+</div><!-- .page -->
+
+</body>
+</html>

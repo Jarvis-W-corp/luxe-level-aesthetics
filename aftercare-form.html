@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aftercare Instructions — Luxe Level Aesthetics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D1B3E;
+    --gold: #C9A96E;
+    --white: #FFFFFF;
+    --offwhite: #F8F7F4;
+    --gold-light: rgba(201,169,110,0.1);
+    --text: #2C2C2C;
+    --text-light: #6B6B6B;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    background: var(--offwhite);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--white);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--navy);
+    padding: 2rem 2.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 1.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  header p {
+    font-family: 'Jost', sans-serif;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+    font-weight: 300;
+  }
+
+  /* ── Content ── */
+  .content { padding: 2rem 2.5rem 2.5rem; }
+
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.92rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.3;
+    margin: 1.75rem 0;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  /* ── Patient Info Row ── */
+  .info-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .info-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .info-field label {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  .info-field input {
+    border: 1px solid #D8D5CF;
+    border-radius: 4px;
+    padding: 0.55rem 0.75rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    background: var(--offwhite);
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .info-field input:focus { outline: none; border-color: var(--gold); }
+
+  /* ── Aftercare Sections ── */
+  .care-section {
+    margin-bottom: 1.75rem;
+  }
+  .care-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+  .care-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .care-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .care-heading h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--navy);
+  }
+
+  .care-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .care-list li {
+    font-size: 0.9rem;
+    color: var(--text);
+    padding: 0.4rem 0 0.4rem 2.8rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  .care-list li::before {
+    content: '';
+    position: absolute;
+    left: 1.1rem;
+    top: 0.72rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+
+  /* ── Alert Box ── */
+  .alert-box {
+    background: #FDF6F0;
+    border: 1px solid #F0DDD0;
+    border-left: 3px solid #D4856A;
+    border-radius: 0 6px 6px 0;
+    padding: 1.15rem 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .alert-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #8B4D3B;
+    margin-bottom: 0.5rem;
+  }
+  .alert-box p {
+    font-size: 0.86rem;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .alert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .alert-list li {
+    font-size: 0.86rem;
+    color: var(--text);
+    padding: 0.15rem 0 0.15rem 1.1rem;
+    position: relative;
+  }
+  .alert-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #D4856A;
+  }
+  .alert-note {
+    font-size: 0.82rem !important;
+    color: var(--text-light) !important;
+    font-style: italic;
+    margin-top: 0.3rem;
+  }
+
+  /* ── Contact Box ── */
+  .contact-box {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 1.75rem;
+  }
+  .contact-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--gold);
+    margin-bottom: 0.65rem;
+  }
+  .contact-box p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+  }
+  .contact-box a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  /* ── Signature ── */
+  .sig-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .sig-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .sig-block label {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.35rem;
+  }
+  .sig-line {
+    border: none;
+    border-bottom: 1.5px solid var(--navy);
+    background: transparent;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    padding: 0.5rem 0.25rem 0.35rem;
+    color: var(--navy);
+  }
+  .sig-line:focus { outline: none; border-bottom-color: var(--gold); }
+
+  /* ── Footer ── */
+  .form-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E8E6E0;
+    margin-top: 2rem;
+  }
+  .form-footer p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; }
+    .page { max-width: 100%; box-shadow: none; }
+    header, .contact-box, .care-icon, .alert-box {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .info-field input {
+      border: none;
+      border-bottom: 1px solid #999;
+      background: transparent;
+      border-radius: 0;
+    }
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 600px) {
+    header { padding: 1.5rem 1.25rem; }
+    header h1 { font-size: 1.4rem; }
+    .content { padding: 1.5rem 1.25rem 2rem; }
+    .info-row { flex-direction: column; gap: 0.85rem; }
+    .care-list li { padding-left: 2.2rem; }
+    .care-list li::before { left: 0.5rem; }
+    .sig-row { flex-direction: column; gap: 1rem; }
+    .contact-box { padding: 1.25rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header>
+    <h1>Luxe Level Aesthetics</h1>
+    <p>Darien, Connecticut</p>
+  </header>
+
+  <div class="content">
+
+    <h2 class="form-title">Neurotoxin Aftercare Instructions</h2>
+    <p class="intro">Thank you for your visit. Follow these simple guidelines<br>to get the best results from your treatment.</p>
+
+    <!-- Patient Info -->
+    <div class="section-label">Visit Details</div>
+    <div class="info-row">
+      <div class="info-field">
+        <label for="patient-name">Patient Name</label>
+        <input type="text" id="patient-name" name="patient-name">
+      </div>
+      <div class="info-field" style="max-width:170px;">
+        <label for="visit-date">Date</label>
+        <input type="date" id="visit-date" name="visit-date">
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-field">
+        <label for="treatment-areas">Treatment Areas</label>
+        <input type="text" id="treatment-areas" name="treatment-areas">
+      </div>
+      <div class="info-field">
+        <label for="injector">Injector</label>
+        <input type="text" id="injector" name="injector">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Your Aftercare Guide -->
+    <div class="section-label">Your Aftercare Guide</div>
+
+    <!-- First 4 Hours -->
+    <div class="care-section">
+      <div class="care-heading">
+        <div class="care-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>First 4 Hours</h3>
+      </div>
+      <ul class="care-list">
+        <li>Stay upright &mdash; avoid lying down or bending over</li>
+        <li>Gently exercise treated muscles (frown, raise your brows, squint)</li>
+        <li>Do not touch, rub, or massage the injection sites</li>
+        <li>Skip strenuous exercise or heavy lifting</li>
+      </ul>
+    </div>
+
+    <!-- First 24 Hours -->
+    <div class="care-section">
+      <div class="care-heading">
+        <div class="care-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </div>
+        <h3>First 24 Hours</h3>
+      </div>
+      <ul class="care-list">
+        <li>Avoid alcohol</li>
+        <li>Skip facials, chemical peels, and microdermabrasion</li>
+        <li>No hot tubs, saunas, or steam rooms</li>
+        <li>Sleep on your back if possible</li>
+      </ul>
+    </div>
+
+    <!-- First 2 Weeks -->
+    <div class="care-section">
+      <div class="care-heading">
+        <div class="care-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>First 2 Weeks</h3>
+      </div>
+      <ul class="care-list">
+        <li>Results begin appearing in 3&ndash;5 days, with full effect at 14 days</li>
+        <li>Contact us if you notice significant asymmetry after day 14</li>
+        <li>A complimentary touch-up is available within 2 weeks if needed</li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- When to Contact Us -->
+    <div class="alert-box">
+      <h3>When to Contact Us Right Away</h3>
+      <p>These reactions are rare, but please call us immediately if you experience:</p>
+      <ul class="alert-list">
+        <li>Severe or persistent headache</li>
+        <li>Vision changes or difficulty opening your eyes</li>
+        <li>Difficulty swallowing or breathing</li>
+      </ul>
+      <p class="alert-note">These are very uncommon. We include them so you know what to look for.</p>
+    </div>
+
+    <!-- Contact Box -->
+    <div class="contact-box">
+      <h3>We're Here for You</h3>
+      <p>
+        Questions about your treatment? Don't hesitate to reach out.<br>
+        <strong style="color:var(--gold);">Luxe Level Aesthetics</strong><br>
+        Darien, CT
+      </p>
+    </div>
+
+    <!-- Acknowledgment -->
+    <div class="sig-row">
+      <div class="sig-block">
+        <label>Patient Signature</label>
+        <input type="text" class="sig-line" name="ack-signature">
+      </div>
+      <div class="sig-block" style="max-width:180px;">
+        <label>Date</label>
+        <input type="date" class="sig-line" name="ack-date" style="font-style:normal; font-size:0.92rem;">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="form-footer">
+      <p>
+        Luxe Level Aesthetics &nbsp;&middot;&nbsp; Darien, CT<br>
+        &copy; 2026 Luxe Level Aesthetics. All rights reserved.
+      </p>
+    </div>
+
+  </div><!-- .content -->
+</div><!-- .page -->
+
+</body>
+</html>
