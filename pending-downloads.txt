@@ -1,0 +1,7 @@
+# Folders that need retry (rate-limited)
+Chemical peel: https://drive.google.com/drive/folders/1rbiqag96CyA7RJ0tQpTx72njoMjTlaeU
+IPL laser vascular: https://drive.google.com/drive/folders/1OjM2v3x2OYvslPut7ryIfZxJNVLORXKV
+Luxe additional docs: https://drive.google.com/drive/folders/1P9TvY75vL5IBFYmCJnnvzIlQilmKPC5q
+Neurotoxin: https://drive.google.com/drive/folders/17Tk6rdb2jHFRF5IlLHPg2BZP5od_qWrz
+Laser hair removal: https://drive.google.com/drive/folders/1y2VrYwz4NQ652TndYIaPjO-GovkwL2rw
+Weight loss: https://drive.google.com/drive/folders/1YhX-kwEatRxxJJKch1yR_M4d6q5dJ54E

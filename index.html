@@ -72,9 +72,8 @@
         .hero__title em { color: var(--gold); font-style: italic; }
         .hero__subtitle { font-size: 17px; color: rgba(255,255,255,0.7); font-weight: 300; line-height: 1.7; margin-bottom: 36px; max-width: 500px; }
         .hero__buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-        .hero__right { position: relative; background: linear-gradient(135deg, #e8ddd0 0%, #d4c5b0 40%, #c9a96e 100%); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .hero__right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.2) 0%, transparent 70%); }
-        .hero__image-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: rgba(255,255,255,0.6); font-style: italic; text-align: center; z-index: 1; position: relative; }
+        .hero__right { position: relative; overflow: hidden; }
+        .hero__right img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
         /* TRUST BAR */
         .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 48px 0; }
@@ -91,11 +90,8 @@
         .services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .service-card { background: var(--white); border: 1px solid var(--border); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
         .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.08); }
-        .service-card__image { height: 220px; display: flex; align-items: center; justify-content: center; position: relative; }
-        .service-card__image--botox { background: linear-gradient(135deg, #0D1B3E 0%, #1a2d5e 50%, #c9a96e 100%); }
-        .service-card__image--weightloss { background: linear-gradient(135deg, #2d6a4f 0%, #52b788 50%, #c9a96e 100%); }
-        .service-card__image--laser { background: linear-gradient(135deg, #5e2129 0%, #c9a96e 50%, #f5edd8 100%); }
-        .service-card__image-text { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(255,255,255,0.5); font-style: italic; z-index: 1; position: relative; }
+        .service-card__image { height: 220px; position: relative; overflow: hidden; }
+        .service-card__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
         .service-card__body { padding: 36px 32px; flex: 1; display: flex; flex-direction: column; }
         .service-card__tag { display: inline-block; background: var(--gold-pale); color: var(--gold); font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; width: fit-content; margin-bottom: 16px; }
         .service-card__title { font-size: 26px; color: var(--navy); margin-bottom: 12px; }
@@ -118,8 +114,8 @@
         .why__feature-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: var(--gold); }
         .why__feature-text h4 { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
         .why__feature-text p { font-size: 13px; color: var(--muted); line-height: 1.6; }
-        .why__image { background: linear-gradient(160deg, #c9a96e 0%, #a8894f 50%, #0D1B3E 100%); min-height: 480px; display: flex; align-items: center; justify-content: center; }
-        .why__image-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: rgba(255,255,255,0.5); font-style: italic; }
+        .why__image { min-height: 480px; position: relative; overflow: hidden; }
+        .why__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute; inset: 0; }
 
         /* ABOUT */
         .about { background: var(--off-white); }
@@ -270,7 +266,7 @@
                 <a href="#contact" class="nav__link">Contact</a>
             </div>
             <div class="nav__right">
-                <a href="tel:+12035550100" class="nav__phone">(203) 555-0100</a>
+                <a href="tel:+12037330629" class="nav__phone">(203) 733-0629</a>
                 <a href="#book" class="btn-navy">Book Consultation</a>
                 <button class="nav__hamburger" id="hamburger" aria-label="Menu">
                     <span></span><span></span><span></span>
@@ -283,7 +279,7 @@
             <a href="#results">Results</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
-            <a href="tel:+12035550100">(203) 555-0100</a>
+            <a href="tel:+12037330629">(203) 733-0629</a>
             <a href="#book" class="btn-navy">Book Consultation</a>
         </div>
     </nav>
@@ -300,7 +296,7 @@
             </div>
         </div>
         <div class="hero__right">
-            <p class="hero__image-text">Hero Image Placeholder</p>
+            <img src="drive-assets/Photos/IMG_9014.PNG" alt="Luxe Level Aesthetics reception and lobby in Darien, CT" loading="eager">
         </div>
     </section>
 
@@ -339,8 +335,8 @@
             <div class="services__grid">
                 <!-- BOTOX -->
                 <div class="service-card">
-                    <div class="service-card__image service-card__image--botox">
-                        <p class="service-card__image-text">Botox Image</p>
+                    <div class="service-card__image">
+                        <img src="drive-assets/Photos/IMG_8473.jpeg" alt="Botox and filler treatment at Luxe Level Aesthetics" loading="lazy">
                     </div>
                     <div class="service-card__body">
                         <span class="service-card__tag">MOST POPULAR</span>
@@ -360,8 +356,8 @@
 
                 <!-- WEIGHT LOSS -->
                 <div class="service-card">
-                    <div class="service-card__image service-card__image--weightloss">
-                        <p class="service-card__image-text">Weight Loss Image</p>
+                    <div class="service-card__image">
+                        <img src="drive-assets/Photos/IMG_8459.jpeg" alt="Medical weight loss treatment room at Luxe Level Aesthetics" loading="lazy">
                     </div>
                     <div class="service-card__body">
                         <span class="service-card__tag">PHYSICIAN-SUPERVISED</span>
@@ -381,8 +377,8 @@
 
                 <!-- LASER -->
                 <div class="service-card">
-                    <div class="service-card__image service-card__image--laser">
-                        <p class="service-card__image-text">Laser Image</p>
+                    <div class="service-card__image">
+                        <img src="drive-assets/Photos/IMG_5773.jpeg" alt="Laser skin treatment results at Luxe Level Aesthetics" loading="lazy">
                     </div>
                     <div class="service-card__body">
                         <span class="service-card__tag">ADVANCED TECHNOLOGY</span>
@@ -443,7 +439,7 @@
                     </div>
                 </div>
                 <div class="why__image">
-                    <p class="why__image-text">Studio Image Placeholder</p>
+                    <img src="drive-assets/Photos/IMG_8459.jpeg" alt="Luxe Level Aesthetics treatment room" loading="lazy">
                 </div>
             </div>
         </div>
@@ -520,8 +516,22 @@
                 <button class="gallery__tab">Weight Loss</button>
                 <button class="gallery__tab">Laser</button>
             </div>
-            <div class="gallery__placeholder">
-                <p>Before &amp; After photos coming soon</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9002.PNG" alt="Before Botox" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--navy);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Before</span></div>
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9010.PNG" alt="After Botox" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">After</span></div>
+                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Botox &mdash; Forehead</p>
+                </div>
+                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9013.jpeg" alt="Before lip filler" style="width:100%;height:180px;object-fit:cover;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--navy);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Before</span></div>
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_8529.jpeg" alt="After lip filler" style="width:100%;height:180px;object-fit:cover;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">After</span></div>
+                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Lip Filler</p>
+                </div>
+                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_8473.jpeg" alt="Filler treatment in progress" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">In Treatment</span></div>
+                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_5773.jpeg" alt="Beautiful results" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Result</span></div>
+                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Dermal Filler</p>
+                </div>
             </div>
         </div>
     </section>
@@ -552,11 +562,11 @@
                 </div>
                 <div class="faq__item">
                     <button class="faq__question"><span>Where are you located and what are your hours?</span><span class="faq__icon">+</span></button>
-                    <div class="faq__answer"><div class="faq__answer-inner">We are located at 123 Post Road, Darien, CT 06820. Our hours are Monday through Friday from 9:00 AM to 6:00 PM, Saturday from 9:00 AM to 3:00 PM, and we are closed on Sundays. We also offer select evening appointments by request.</div></div>
+                    <div class="faq__answer"><div class="faq__answer-inner">We are located at 6 Thorndal Circle, Darien, CT 06820. Our hours are Monday through Friday from 9:00 AM to 6:00 PM, Saturday from 9:00 AM to 3:00 PM, and we are closed on Sundays. We also offer select evening appointments by request.</div></div>
                 </div>
                 <div class="faq__item">
                     <button class="faq__question"><span>How do I book an appointment?</span><span class="faq__icon">+</span></button>
-                    <div class="faq__answer"><div class="faq__answer-inner">You can book by clicking the "Book Consultation" button on our website, calling us at (203) 555-0100, or emailing hello@luxelevelaesthetics.com. We typically respond within a few hours and can accommodate most schedules within the week.</div></div>
+                    <div class="faq__answer"><div class="faq__answer-inner">You can book by clicking the "Book Consultation" button on our website, calling us at (203) 733-0629, or emailing info@luxelevelaesthetics.com. We typically respond within a few hours and can accommodate most schedules within the week.</div></div>
                 </div>
             </div>
         </div>
@@ -573,7 +583,7 @@
                     <p class="eyebrow location__eyebrow">VISIT US</p>
                     <h2 class="location__title">Find Our Studio</h2>
                     <p class="location__address">
-                        123 Post Road<br>
+                        6 Thorndal Circle<br>
                         Darien, CT 06820
                     </p>
                     <div class="location__hours">
@@ -585,8 +595,8 @@
                         </p>
                     </div>
                     <div class="location__contact-links">
-                        <a href="tel:+12035550100">&#9742; (203) 555-0100</a>
-                        <a href="mailto:hello@luxelevelaesthetics.com">&#9993; hello@luxelevelaesthetics.com</a>
+                        <a href="tel:+12037330629">&#9742; (203) 733-0629</a>
+                        <a href="mailto:info@luxelevelaesthetics.com">&#9993; info@luxelevelaesthetics.com</a>
                     </div>
                 </div>
             </div>
@@ -601,7 +611,7 @@
                 <h2 class="cta__title">Ready to Look &amp; Feel Your Best?</h2>
                 <p class="cta__subtitle">Book your complimentary consultation and discover the right treatment plan for you. No pressure, no obligation &mdash; just expert guidance.</p>
                 <a href="#book" class="btn-gold">Book Your Consultation</a>
-                <a href="tel:+12035550100" class="cta__phone">Or call us directly: (203) 555-0100</a>
+                <a href="tel:+12037330629" class="cta__phone">Or call us directly: (203) 733-0629</a>
                 <div class="cta__guarantees">
                     <div class="cta__guarantee"><span class="cta__guarantee-icon">&#10003;</span>Complimentary Consultation</div>
                     <div class="cta__guarantee"><span class="cta__guarantee-icon">&#10003;</span>No Pressure</div>
@@ -619,7 +629,7 @@
                     <div class="footer__brand-name">LUXE LEVEL</div>
                     <div class="footer__brand-sub">AESTHETICS</div>
                     <p class="footer__brand-desc">Darien's premier med spa for Botox, medical weight loss, and advanced laser treatments. Subtle refinement, elevated results.</p>
-                    <p class="footer__address">123 Post Road<br>Darien, CT 06820</p>
+                    <p class="footer__address">6 Thorndal Circle<br>Darien, CT 06820</p>
                 </div>
                 <div>
                     <h4 class="footer__heading">Services</h4>
@@ -642,8 +652,8 @@
                 </div>
                 <div>
                     <h4 class="footer__heading">Contact</h4>
-                    <div class="footer__contact-item"><a href="tel:+12035550100">(203) 555-0100</a></div>
-                    <div class="footer__contact-item"><a href="mailto:hello@luxelevelaesthetics.com">hello@luxelevelaesthetics.com</a></div>
+                    <div class="footer__contact-item"><a href="tel:+12037330629">(203) 733-0629</a></div>
+                    <div class="footer__contact-item"><a href="mailto:info@luxelevelaesthetics.com">info@luxelevelaesthetics.com</a></div>
                     <div class="footer__contact-item" style="margin-top: 20px; color: rgba(255,255,255,0.4); font-size: 13px; line-height: 1.8;">
                         <strong style="color: rgba(255,255,255,0.6);">Hours</strong><br>
                         Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM<br>
