@@ -709,20 +709,17 @@
             text-align: center;
         }
         .injector__photo {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #e8ddd0, #c9a96e);
             margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
         }
-        .injector__photo-text {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 14px;
-            color: rgba(255,255,255,0.6);
-            font-style: italic;
+        .injector__photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%;
         }
         .injector__name {
             font-size: 24px;
@@ -1179,7 +1176,7 @@
     <!-- ========== TREATMENT SPLIT ========== -->
     <section class="treatments" id="treatments">
         <div class="treatments__image">
-            <img src="drive-assets/Photos/IMG_5773.jpeg" alt="Natural-looking Botox and filler results at Luxe Level Aesthetics" loading="lazy">
+            <img src="drive-assets/Photos/IMG_8473.jpeg" alt="Client receiving injectable treatment at Luxe Level Aesthetics" loading="lazy">
         </div>
         <div class="treatments__content">
             <p class="eyebrow treatments__eyebrow">OUR TREATMENTS</p>
@@ -1344,7 +1341,7 @@
             <div class="injector__grid">
                 <div class="injector__card">
                     <div class="injector__photo">
-                        <p class="injector__photo-text">Injector Photo</p>
+                        <img src="drive-assets/Photos/IMG_5773.jpeg" alt="Dr. Sarah Mitchell - Luxe Level Aesthetics" loading="lazy">
                     </div>
                     <h3 class="injector__name">Dr. Sarah Mitchell</h3>
                     <p class="injector__creds">MSN, FNP-BC</p>
