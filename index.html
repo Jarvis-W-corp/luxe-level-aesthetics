@@ -154,6 +154,14 @@
         .gallery__tab.active, .gallery__tab:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
         .gallery__placeholder { text-align: center; padding: 60px 0; border: 2px dashed var(--border); background: var(--white); }
         .gallery__placeholder p { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--muted); font-style: italic; }
+        .gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .gallery__card { background: var(--white); border: 1px solid var(--border); overflow: hidden; }
+        .gallery__card-img-wrap { position: relative; }
+        .gallery__card-img { width: 100%; height: 180px; object-fit: cover; object-position: top; }
+        .gallery__card-label { position: absolute; top: 8px; left: 8px; color: #fff; font-size: 10px; padding: 4px 10px; font-family: 'Jost', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+        .gallery__card-label--before { background: var(--navy); }
+        .gallery__card-label--after { background: var(--gold); }
+        .gallery__card-caption { text-align: center; padding: 14px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); }
 
         /* FAQ */
         .faq { background: var(--off-white); }
@@ -221,28 +229,36 @@
             .nav__links { display: none; }
             .nav__phone { display: none; }
             .nav__hamburger { display: block; }
+            .nav .btn-navy { padding: 10px 16px; font-size: 10px; white-space: nowrap; }
             .nav__mobile-menu.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); padding: 24px; gap: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); z-index: 9989; }
             .nav__mobile-menu a { font-size: 16px; color: var(--text); padding: 8px 0; }
             .nav__mobile-menu .btn-navy { text-align: center; }
             .hero { grid-template-columns: 1fr; }
             .hero__left { padding: 60px 24px; }
             .hero__title { font-size: 36px; }
-            .hero__right { min-height: 280px; }
+            .hero__right { min-height: 320px; }
+            .hero__right img { object-position: center top; }
             .trust-bar__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             .trust-bar__number { font-size: 32px; }
             .services__grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
             .why__grid, .about__grid, .location__grid { grid-template-columns: 1fr; }
             .why__image { min-height: 300px; }
+            .why__features { grid-template-columns: 1fr; }
             .testimonials__grid { grid-template-columns: 1fr; }
             .gallery__tabs { flex-wrap: wrap; }
+            .gallery__grid { grid-template-columns: 1fr !important; max-width: 480px; margin-left: auto; margin-right: auto; }
+            .gallery__card-img { height: 220px !important; }
             .footer__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
             .services__title, .why__title, .testimonials__title, .faq__title, .gallery__title, .about__bio-title, .cta__title, .location__title { font-size: 32px; }
             .section-pad { padding: 60px 0; }
         }
         @media (max-width: 600px) {
+            .nav .btn-navy { padding: 8px 12px; font-size: 10px; }
+            .hero__right { min-height: 260px; }
             .hero__buttons { flex-direction: column; }
             .hero__buttons .btn-gold, .hero__buttons .btn-ghost { text-align: center; width: 100%; }
             .trust-bar__grid { grid-template-columns: 1fr 1fr; }
+            .gallery__card-img { height: 200px !important; }
             .footer__grid { grid-template-columns: 1fr; }
             .footer__bottom { flex-direction: column; text-align: center; }
             .cta__title { font-size: 30px; }
@@ -516,21 +532,21 @@
                 <button class="gallery__tab">Weight Loss</button>
                 <button class="gallery__tab">Laser</button>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9002.PNG" alt="Before Botox" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--navy);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Before</span></div>
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9010.PNG" alt="After Botox" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">After</span></div>
-                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Botox &mdash; Forehead</p>
+            <div class="gallery__grid">
+                <div class="gallery__card">
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_9002.PNG" alt="Before Botox" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--before">Before</span></div>
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_9010.PNG" alt="After Botox" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--after">After</span></div>
+                    <p class="gallery__card-caption">Botox &mdash; Forehead</p>
                 </div>
-                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_9013.jpeg" alt="Before lip filler" style="width:100%;height:180px;object-fit:cover;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--navy);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Before</span></div>
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_8529.jpeg" alt="After lip filler" style="width:100%;height:180px;object-fit:cover;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">After</span></div>
-                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Lip Filler</p>
+                <div class="gallery__card">
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_9013.jpeg" alt="Before lip filler" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--before">Before</span></div>
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_8529.jpeg" alt="After lip filler" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--after">After</span></div>
+                    <p class="gallery__card-caption">Lip Filler</p>
                 </div>
-                <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_8473.jpeg" alt="Filler treatment in progress" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">In Treatment</span></div>
-                    <div style="position: relative;"><img src="drive-assets/Photos/IMG_5773.jpeg" alt="Beautiful results" style="width:100%;height:180px;object-fit:cover;object-position:top;" loading="lazy"><span style="position:absolute;top:8px;left:8px;background:var(--gold);color:#fff;font-size:10px;padding:4px 10px;font-family:'Jost',sans-serif;letter-spacing:1px;text-transform:uppercase;">Result</span></div>
-                    <p style="text-align:center;padding:14px;font-family:'Jost',sans-serif;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--navy);">Dermal Filler</p>
+                <div class="gallery__card">
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_8473.jpeg" alt="Filler treatment in progress" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--after">In Treatment</span></div>
+                    <div class="gallery__card-img-wrap"><img src="drive-assets/Photos/IMG_5773.jpeg" alt="Beautiful results" class="gallery__card-img" loading="lazy"><span class="gallery__card-label gallery__card-label--after">Result</span></div>
+                    <p class="gallery__card-caption">Dermal Filler</p>
                 </div>
             </div>
         </div>

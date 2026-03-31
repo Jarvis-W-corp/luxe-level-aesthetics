@@ -941,7 +941,10 @@
                 font-size: 36px;
             }
             .hero__right {
-                min-height: 300px;
+                min-height: 400px;
+            }
+            .hero__right img {
+                object-position: center top;
             }
             .hero__badge {
                 bottom: 16px;
@@ -971,7 +974,10 @@
                 grid-template-columns: 1fr;
             }
             .treatments__image {
-                min-height: 250px;
+                min-height: 300px;
+            }
+            .treatments__image img {
+                object-position: center top;
             }
             .treatments__content {
                 padding: 48px 24px;
@@ -1013,6 +1019,21 @@
             }
             .nav__phone {
                 display: none;
+            }
+            .nav .btn-navy {
+                font-size: 10px;
+                padding: 8px 14px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+            .ba-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            .ba-grid img {
+                height: 200px !important;
             }
             .toast {
                 bottom: 80px;
@@ -1189,7 +1210,7 @@
                 <h2 style="font-size: 42px; color: var(--navy); margin-bottom: 12px;">Before &amp; After</h2>
                 <p style="font-size: 16px; color: var(--muted); max-width: 500px; margin: 0 auto;">Actual client transformations at Luxe Level Aesthetics. Results may vary.</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto;">
+            <div class="ba-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto;">
                 <!-- Botox Forehead Before/After -->
                 <div style="background: var(--white); border: 1px solid var(--border); overflow: hidden;">
                     <div style="position: relative;">
