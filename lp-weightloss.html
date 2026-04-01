@@ -102,20 +102,20 @@
         .btn-ghost {
             display: inline-block;
             background: transparent;
-            color: var(--white);
+            color: var(--navy);
             font-family: 'Jost', sans-serif;
             font-weight: 500;
             font-size: 14px;
             letter-spacing: 1.2px;
             text-transform: uppercase;
             padding: 14px 28px;
-            border: 1.5px solid rgba(255,255,255,0.4);
+            border: 1.5px solid var(--navy);
             cursor: pointer;
             transition: border-color 0.3s, background 0.3s;
         }
         .btn-ghost:hover {
-            border-color: var(--white);
-            background: rgba(255,255,255,0.08);
+            border-color: var(--navy);
+            background: rgba(13,27,62,0.06);
         }
         .eyebrow {
             font-family: 'Jost', sans-serif;
@@ -150,7 +150,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: var(--navy);
+            background: #FFFFFF;
             border-top: 2px solid var(--gold);
             z-index: 9999;
             padding: 12px 0;
@@ -166,7 +166,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            color: var(--white);
+            color: var(--navy);
             font-size: 14px;
         }
         .sticky-bar__spots {
@@ -184,11 +184,11 @@
             gap: 16px;
         }
         .sticky-bar__phone {
-            color: rgba(255,255,255,0.7);
+            color: var(--muted);
             font-size: 14px;
             transition: color 0.3s;
         }
-        .sticky-bar__phone:hover { color: var(--white); }
+        .sticky-bar__phone:hover { color: var(--navy); }
         .sticky-bar .btn-gold {
             padding: 10px 24px;
             font-size: 12px;
@@ -331,7 +331,7 @@
             min-height: 640px;
         }
         .hero__left {
-            background: var(--navy);
+            background: #FFFFFF;
             padding: 80px 60px;
             display: flex;
             flex-direction: column;
@@ -344,7 +344,7 @@
         }
         .hero__title {
             font-size: 52px;
-            color: var(--white);
+            color: var(--navy);
             line-height: 1.1;
             margin-bottom: 24px;
         }
@@ -354,7 +354,7 @@
         }
         .hero__subtitle {
             font-size: 17px;
-            color: rgba(255,255,255,0.7);
+            color: var(--muted);
             font-weight: 300;
             line-height: 1.7;
             margin-bottom: 28px;
@@ -381,7 +381,7 @@
         }
         .hero__guarantee {
             font-size: 13px;
-            color: rgba(255,255,255,0.5);
+            color: var(--muted);
             display: flex;
             align-items: center;
             gap: 8px;
@@ -527,7 +527,7 @@
             inset: 0;
         }
         .treatments__content {
-            background: var(--navy);
+            background: #FFFFFF;
             padding: 80px 60px;
             display: flex;
             flex-direction: column;
@@ -539,12 +539,12 @@
         }
         .treatments__title {
             font-size: 38px;
-            color: var(--white);
+            color: var(--navy);
             margin-bottom: 12px;
         }
         .treatments__subtitle {
             font-size: 15px;
-            color: rgba(255,255,255,0.6);
+            color: var(--muted);
             margin-bottom: 36px;
             line-height: 1.7;
         }
@@ -580,12 +580,12 @@
             font-family: 'Jost', sans-serif;
             font-size: 16px;
             font-weight: 500;
-            color: var(--white);
+            color: var(--navy);
             margin-bottom: 4px;
         }
         .treatments__step-desc {
             font-size: 14px;
-            color: rgba(255,255,255,0.55);
+            color: var(--muted);
             line-height: 1.6;
         }
 
@@ -797,7 +797,7 @@
 
         /* ========== BOOKING CTA ========== */
         .booking-cta {
-            background: var(--navy);
+            background: #FFFFFF;
             position: relative;
             overflow: hidden;
             text-align: center;
@@ -806,7 +806,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(201,169,110,0.15) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(201,169,110,0.08) 0%, transparent 70%);
             pointer-events: none;
         }
         .booking-cta__content {
@@ -819,12 +819,12 @@
         }
         .booking-cta__title {
             font-size: 52px;
-            color: var(--white);
+            color: var(--navy);
             margin-bottom: 16px;
         }
         .booking-cta__subtitle {
             font-size: 17px;
-            color: rgba(255,255,255,0.6);
+            color: var(--muted);
             max-width: 520px;
             margin: 0 auto 28px;
             line-height: 1.7;
@@ -843,12 +843,12 @@
         }
         .booking-cta__phone {
             display: block;
-            color: rgba(255,255,255,0.6);
+            color: var(--muted);
             font-size: 15px;
             margin-top: 20px;
             transition: color 0.3s;
         }
-        .booking-cta__phone:hover { color: var(--white); }
+        .booking-cta__phone:hover { color: var(--navy); }
         .booking-cta__guarantees {
             display: flex;
             justify-content: center;
@@ -860,7 +860,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: rgba(255,255,255,0.5);
+            color: var(--muted);
             font-size: 13px;
         }
         .booking-cta__guarantee-icon {
@@ -1168,8 +1168,7 @@
             <h1 class="hero__title">Lose Weight Safely with Medical-Grade <em>Support</em></h1>
             <p class="hero__subtitle">Our physician-supervised GLP-1 programs use FDA-approved Semaglutide and Tirzepatide to help you lose weight effectively, with personalized dosing, weekly check-ins, and ongoing medical guidance every step of the way.</p>
             <div class="hero__spots-badge">
-                <span class="pulse-dot"></span>
-                Only <span id="hero-spots">19</span> enrollment spots remaining this month
+                <span class="pulse-dot"></span><span>Only <span id="hero-spots">19</span> enrollment spots remaining this month</span>
             </div>
             <div class="hero__buttons">
                 <a href="#book" class="btn-gold">Start Your Program</a>
@@ -1434,8 +1433,7 @@
                 <h2 class="booking-cta__title">Your Healthier Self Awaits</h2>
                 <p class="booking-cta__subtitle">Take the first step toward lasting weight loss with a proven, physician-supervised program. Book your complimentary consultation and discover what Luxe Level can do for you.</p>
                 <div class="booking-cta__spots">
-                    <span class="pulse-dot"></span>
-                    Only <span id="cta-spots">19</span> enrollment spots remaining this month
+                    <span class="pulse-dot"></span><span>Only <span id="cta-spots">19</span> enrollment spots remaining this month</span>
                 </div>
                 <br>
                 <a href="#book" class="btn-gold">Book Your Consultation</a>
@@ -1521,8 +1519,7 @@
         <div class="container">
             <div class="sticky-bar__left">
                 <div class="sticky-bar__spots">
-                    <span class="pulse-dot"></span>
-                    Only <span id="bar-spots">19</span> enrollment spots remaining this month
+                    <span class="pulse-dot"></span><span>Only <span id="bar-spots">19</span> enrollment spots remaining this month</span>
                 </div>
                 <div class="sticky-bar__timer">
                     Offer expires in <span id="countdown">2:00:00</span>
