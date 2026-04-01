@@ -739,9 +739,13 @@
             border-radius: 50%;
             background: linear-gradient(135deg, #e8ddd0, #c9a96e);
             margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
+        }
+        .injector__photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%;
         }
         .injector__photo-text {
             font-family: 'Cormorant Garamond', serif;
@@ -1154,7 +1158,7 @@
 
     <!-- ========== URGENCY BANNER ========== -->
     <div class="urgency-banner">
-        LIMITED AVAILABILITY &mdash; Only 19 New Patient Spots Remaining For April
+        LIMITED AVAILABILITY &mdash; Only 19 New Patient Spots Remaining for April
     </div>
 
     <!-- ========== HERO ========== -->
@@ -1394,7 +1398,7 @@
             <div class="injector__grid">
                 <div class="injector__card">
                     <div class="injector__photo">
-                        <p class="injector__photo-text">Provider Photo</p>
+                        <img src="drive-assets/Photos/IMG_5773.jpeg" alt="Dr. Sarah Mitchell, medical weight loss provider at Luxe Level Aesthetics">
                     </div>
                     <h3 class="injector__name">Dr. Sarah Mitchell</h3>
                     <p class="injector__creds">MSN, FNP-BC</p>

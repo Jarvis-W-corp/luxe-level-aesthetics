@@ -1025,12 +1025,16 @@
                 text-overflow: ellipsis;
                 max-width: 200px;
             }
+            .ba-gallery h2 {
+                font-size: 32px !important;
+            }
             .ba-grid {
                 grid-template-columns: 1fr !important;
                 gap: 24px !important;
             }
             .ba-grid img {
                 height: 200px !important;
+                object-fit: cover !important;
             }
             .toast {
                 bottom: 80px;
@@ -1047,6 +1051,12 @@
         }
 
         @media (max-width: 480px) {
+            .hero__right {
+                min-height: 280px;
+            }
+            .hero__title {
+                font-size: 30px;
+            }
             .hero__buttons {
                 flex-direction: column;
             }
@@ -1057,6 +1067,21 @@
             }
             .proof-strip__grid {
                 grid-template-columns: 1fr 1fr;
+            }
+            .booking-cta__title {
+                font-size: 28px;
+            }
+            .booking-cta__subtitle {
+                font-size: 15px;
+            }
+            .ba-gallery h2 {
+                font-size: 26px !important;
+            }
+            .ba-grid img {
+                height: 180px !important;
+            }
+            .treatments__image {
+                min-height: 250px;
             }
         }
     </style>
